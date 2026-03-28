@@ -767,11 +767,11 @@ if predict_button:
                 shap_values = explainer(features_df)
                 
                 fig, ax = plt.subplots(figsize=(12, 5))
-                fig.patch.set_facecolor('rgba(10, 14, 39, 0)')
-                ax.set_facecolor('rgba(10, 14, 39, 0)')
+                fig.patch.set_facecolor('none')
+                ax.set_facecolor('#0a0e27')
                 plt.tight_layout()
                 shap.plots.waterfall(shap_values[0], show=False)
-                st.pyplot(fig, use_container_width=True)
+                st.pyplot(fig, use_container_width=True, transparent=True)
                 
                 st.markdown("""
                 <div class='info-box'>

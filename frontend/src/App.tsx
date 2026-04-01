@@ -179,7 +179,7 @@ export default function App() {
 
   useEffect(() => {
     if (activeTab === 'Analytics' && !modelMetrics) {
-      fetch('http://127.0.0.1:5000/metrics')
+      fetch('https://fraud-detection-q454.onrender.com/metrics')
         .then(res => res.json())
         .then(data => setModelMetrics(data))
         .catch(err => console.error("Could not load metrics", err));
@@ -248,7 +248,7 @@ export default function App() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/predict", {
+      const response = await fetch("https://fraud-detection-q454.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ 

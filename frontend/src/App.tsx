@@ -13,7 +13,7 @@ import {
   ReferenceLine, BarChart, Bar, Cell, ScatterChart, Scatter, ZAxis, Legend
 } from 'recharts';
 
-const BACKEND = 'http://localhost:5000';
+const BACKEND = 'https://web-production-9696a.up.railway.app';
 
 const CATEGORIES = [
   { value: 'grocery_pos', label: 'Grocery (POS)' },

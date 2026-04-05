@@ -201,6 +201,12 @@ def get_metrics():
         "F1 Score": "N/A", "ROC AUC": "N/A", "Training Size": "N/A"
     }), 404
 
+# if __name__ == '__main__':
+#     print("Starting Saru API Server on port 5000...")
+#     app.run(host='0.0.0.0', port=5000, debug=True)
+
+
 if __name__ == '__main__':
-    print("Starting Saru API Server on port 5000...")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get("PORT", 8080))
+    print(f"Starting Saru API Server on port {port}...")
+    app.run(host='0.0.0.0', port=port)
